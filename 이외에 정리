@@ -27,3 +27,16 @@ public enum Operators { Add, Sub, Multi, Div }
 
 public Operators Opt = Operator.Add; 일단 초기화 해놈
 -> 리액트 state 같은 개념으로 사용하려고
+
+접근제한자
+
+클래스는 제한자 안쓰면 internal 이 default 
+클래스를 public 으로 만들면 클래스 외부에서 사용 가능
+클래스 내부 -> 아무런 제한자를 안쓰면 자동으로 private이 default
+클래스 사용법 -> using CuteCat;
+
+private -> 클래스 내부에서만 사용가능
+public -> 외부에서도 사용가능
+
+생성자의 클래스 명은 무조건 생성자 함수랑 같아야함.
+this -> 지금 생성되고 있는 클래스의 인스턴스

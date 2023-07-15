@@ -1,0 +1,29 @@
+if(int.TryParse(Sum1.Text, out )) --> 인트로 변환 시도
+
+String.IsNullOrWhiteSpace(Sum1.Text) --> 텍스트가 NUll이거나 공백인가 Boolean
+
+int number1 = Convert.ToInt32(Sum1, Text); -> Int32 형태로 변환
+
+int num = int.Parse(NumScreen.Text); -> int형으로 변환
+
+NumScreen.Text = Rusult.ToString(); -> 스트링으로 변환
+
+public bool isNewNum = true; -> 버튼 누를 때 처음 들어온건지 나중에 온건지 체크 할때 사용하려고 만듬
+
+SetNum("2"); ->
+Button numButton = (Button)sender; -> sender를 버튼으로 변환, 원래는 object형이니까
+--> SetNum(numButton.Text);
+
+Click 이벤트가 발생되면 (object sender, EventArgs e){} 에서 오브젝트로 모든 프로퍼티를 전송해줌
+그걸 버튼으로 변환한뒤에 그중에 numButton.Text를 이용해 반환함.
+
+public enum -> 열거형으로 데이터 타입을 정의
+
+선언방법 
+ex) public enum Season { Spring, Summer, Fall, Winter }
+Season currentSeason = Season.Spring;
+
+public enum Operators { Add, Sub, Multi, Div }
+
+public Operators Opt = Operator.Add; 일단 초기화 해놈
+-> 리액트 state 같은 개념으로 사용하려고

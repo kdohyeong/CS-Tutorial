@@ -17,36 +17,28 @@ namespace AnimalShelter
         private DateTime _BirthDay; 
 
 
-
-        public Customer(string firstName, string lastName, int age, DateTime birthday)
+        public Customer(string firstName, string lastName, DateTime birthday)
         { 
             this.FirstName = firstName;
             this.LastName = lastName;
-            this._Age = age;
+            this._Age = Age;
             this._BirthDay = birthday;
             this._IsQualified = DateTime.Now.Year - birthday.Year >= 18;
 
         }
-
+        /*
         public int GetAge()
         {
             return this._Age;
-        }
-
-        public DateTime Birthday
-        { 
-            get { return this._BirthDay; }
-            set 
-            {
-                this._BirthDay = value;
-                _IsQualified = Age >= 18;
-            }
-        }
-        /*
+        }        
         public void SetAge(int age)
         {
             _Age = age;
             _IsQualified = age >= 18;
+        }
+        public bool GetIsQualified()
+        {
+            return _IsQualified;
         }
         */
 
@@ -62,11 +54,17 @@ namespace AnimalShelter
                 _IsQualified = Age >= 18;
             }
         }
-        /*
-        public bool GetIsQualified()
+        public DateTime Birthday
         {
-            return _IsQualified;
+            get { return this._BirthDay; }
+            set
+            {
+                this._BirthDay = value;
+                _IsQualified = Age >= 18;
+            }
         }
+        /*
+
         */
         public bool IsQualified 
         {

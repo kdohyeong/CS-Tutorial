@@ -8,46 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace CuteCat
+namespace AnimalShelter
 {
     public partial class Form1 : Form
-    {   
-
-        private Cat MyCat = new Cat("Zery", 6);
-
-
+    {
         public Form1()
         {
             InitializeComponent();
-
         }
 
-        private void Play_Click(object sender, EventArgs e)
+        private void CreateCustomer_Click(object sender, EventArgs e)
         {
-            MyCat.Play();
-            CatScreen.Text = MyCat.Express();
+            Customer cus = new Customer("Ian", "Na", 10, new DateTime(2000, 1, 1));
+            cus.Address = "123 Wilshire Blvd";
+
+            CusFullName.Text = cus.FullName;
+            CusAge.Text = cus.Age.ToString();
+            CusAddress.Text = cus.Address;
+            CusDescription.Text = cus.Description;
+            CusIsQualified.Text = cus.IsQualified.ToString();
+            bool test = cus.IsQualified;
+
+            /*
+            DateTime date = new DateTime(2016, 2, 5);
+            // 클릭 발생시 현재 시간을 저장
+            DateTime current = DateTime.Now; 
+            */
+
         }
 
-        private void Feed_Click(object sender, EventArgs e)
-        {
-            MyCat.Eat();
-            CatScreen.Text = MyCat.Express();
-        }
-
-        private void CatTimer_Tick(object sender, EventArgs e)
-        {
-            MyCat.GetBored();
-            CatScreen.Text = MyCat.Express();
-        }
     }
-
- 
-
-
-
-
-
-
-
-
 }
